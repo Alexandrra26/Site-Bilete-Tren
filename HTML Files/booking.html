@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervare Bilete Tren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Rezervare Bilete Tren</h1>
+            <nav>
+                <ul>
+                    <li><a href="booking.html">Rezervare Bilete</a></li>
+                    <li><a href="login.html">Autentificare</a></li>
+                    <li><a href="register.html">Creare Cont</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Rezervare Bilete</h2>
+        <form id="budget-form">
+            <label for="buget">Buget Maxim:</label>
+            <input type="number" step="0.01" id="buget" name="buget" required>
+            <button type="button" onclick="generateTickets()">Generează Bilete</button>
+        </form>
+        <div id="tickets-container"></div>
+
+        <h2>Rezervare</h2>
+        <form id="booking-form" action="../src/book.php" method="POST" onsubmit="return prepareBookingData()">
+            <div id="selected-tickets-container"></div>
+            <input type="hidden" name="bilete">
+            <button type="submit">Rezervă</button>
+        </form>
+
+        <div id="message-container"></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rezervare Bilete Tren. Toate drepturile rezervate.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

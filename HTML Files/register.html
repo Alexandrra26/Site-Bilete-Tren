@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creare Cont</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Rezervare Bilete Tren</h1>
+            <nav>
+                <ul>
+                    <li><a href="booking.html">Rezervare Bilete</a></li>
+                    <li><a href="login.html">Autentificare</a></li>
+                    <li><a href="register.html">Creare Cont</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Creare Cont</h2>
+        <form action="../src/register.php" method="POST">
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" required>
+            <label for="prenume">Prenume:</label>
+            <input type="text" id="prenume" name="prenume" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Parolă:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Creare Cont</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rezervare Bilete Tren. Toate drepturile rezervate.</p>
+    </footer>
+</body>
+</html>
